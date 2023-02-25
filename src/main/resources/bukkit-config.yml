@@ -1,0 +1,13 @@
+
+placeholders:
+  "ppt_server_(\\w+)":  # eg. %ppattern_ppt_server_abc%
+    - input: "%serverutils_server_online_$1%"  # output -> &aONLINE or &cOFFLINE
+      check: "ONLINE"
+      output: "[&aON-LINE&7 $1]"  # is online output
+    - output: "[&cOFF-LINE&7 $1]"  # or else output
+
+  "hpdisplay":
+    - input: "%player_health%"
+      check: "^20\\.0$"
+      output: "FULL"
+    - output: "%player_health%"

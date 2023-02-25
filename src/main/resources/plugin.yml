@@ -1,0 +1,15 @@
+name: PAPIPattern
+version: '${version}'
+main: com.gmail.necnionch.myplugin.papipattern.bukkit.PlaceholderPatternPlugin
+api-version: 1.13
+depend: [ PlaceholderAPI ]
+authors: [ Necnion8 ]
+
+commands:
+  papipattern:
+    permission: "papipattern.command.papipattern"
+    usage: "§c/<command> reload"
+
+permissions:
+  papipattern.command.papipattern:
+    default: op
