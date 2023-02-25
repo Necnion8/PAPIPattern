@@ -2,10 +2,12 @@
 PlaceholderAPIと連携し、正規表現により出力をカスタムする
 
 ## 前提
+- Bukkit またはその派生
 - PlaceholderAPI
 
 ## コマンドと権限
 - 設定の再読み込みコマンド - `/papiPattern reload`
+> 権限: `papipattern.command.papipattern` (default: OP)
 
 ## 設定
 ```yml
@@ -34,7 +36,7 @@ placeholders:
 ##### 例: `%ppattern_hpdisplay%`
 1. 実行者プレイヤーのHP(`%player_health%`)が `20.0` だった場合に `FULL` という文字を出力します。
 2. **1.** の条件がマッチしなかった場合は、`%player_health%` の値がそのまま出力されます。
-##### 例: `%ppattern_ppt_server_XXX%`)
+##### 例: `%ppattern_ppt_server_XXX%`
 0. `%ppattern_ppt_server_abc%` が与えられた場合
 1. `input` が `%serverutils_server_online_abc%` に変換され、`ONLINE` を含む値の場合は `ON-LINE abc` を出力します。
 2. **1.** の条件がマッチしなかった場合は、`OFF-LINE abc` の値が出力されます。
