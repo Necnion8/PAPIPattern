@@ -33,7 +33,7 @@ public class HolderPatternMatcher {
 
             Matcher check = entry.getCheck().matcher(PlaceholderAPI.setPlaceholders(player, matcher.replaceAll(entry.getInput())));
             if (check.find()) {
-                return matcher.replaceAll(entry.getOutput());
+                return PlaceholderAPI.setPlaceholders(player, matcher.replaceAll(entry.getOutput()));
             }
         }
         return "";
